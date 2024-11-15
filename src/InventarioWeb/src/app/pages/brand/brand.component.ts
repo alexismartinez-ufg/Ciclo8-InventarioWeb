@@ -4,11 +4,10 @@ import {MatTableModule} from '@angular/material/table';
 import { BrandService } from '../../services/brand.service';
 import { Brand } from '../../interfaces/Brand';
 import Swal from 'sweetalert2';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-brand',
-  standalone: true,
-  imports: [MatCardModule,MatTableModule],
   templateUrl: './brand.component.html',
   styleUrl: './brand.component.css'
 })
@@ -29,7 +28,7 @@ export class BrandComponent {
         }
       },
       error: (err) => {
-        
+
         let errorMessage = 'Hubo un error al procesar tu solicitud. Intenta nuevamente.';
         if (err.status === 400) {
           errorMessage = 'Sucedio un problema al obtener las Brands.';

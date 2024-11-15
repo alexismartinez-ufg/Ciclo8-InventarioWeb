@@ -12,8 +12,6 @@ import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -43,7 +41,7 @@ export class LoginComponent {
         this.router.navigate(['brand']);
       },
       error: (err) => {
-        
+
         let errorMessage = 'Hubo un error al procesar tu solicitud. Intenta nuevamente.';
         if (err.status === 401) {
           errorMessage = 'Credenciales inválidas.';

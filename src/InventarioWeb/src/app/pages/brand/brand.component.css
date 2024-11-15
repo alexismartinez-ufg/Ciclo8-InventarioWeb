@@ -1,0 +1,13 @@
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.card-container mat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* Ajusta el espacio entre el título y el botón */
+  padding-bottom: 10px;
+}
