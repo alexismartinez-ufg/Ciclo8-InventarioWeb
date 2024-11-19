@@ -1,0 +1,56 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+   mat-icon-button
+   *ngIf="sidenav.mode === 'over'"
+   (click)="sidenav.toggle()" class="nav-button">
+   <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+   <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+ </button>
+   <!-- <img class="nav-img" src="https://v17.angular.io/assets/images/logos/angular/logo-nav@2x.png"> -->
+
+   <div class="display-right">
+     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+       <mat-icon style="color: white;">favorite</mat-icon>
+     </button>
+     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+       <mat-icon style="color: rgb(157, 209, 232);">share</mat-icon>
+     </button>
+   </div>
+ </mat-toolbar>
+ <mat-sidenav-container>
+   <mat-sidenav class="mat-elevation-z8" #sidenav="matSidenav" class="mat-elevation-z8">
+     <img class="avatar mat-elevation-z8"
+       src="../assets/img/persona.png" />
+
+     <h4 class="name">Nombre</h4>
+     <p class="designation">Si</p>
+
+     <mat-divider></mat-divider>
+     <!-- <mat-nav-list> -->
+    @for (item of listaMenu; track $index) {
+      <mat-list-item>
+        <a class="menu-icons" routerLink="/{{item.url}}">
+          <mat-icon>{{item.icono}}</mat-icon>
+          <span>{{item.nombre}}</span>
+        </a>
+      </mat-list-item>
+    }
+
+     <div class="bottom-nav">
+       <mat-divider></mat-divider>
+
+       <mat-list-item>
+         <a class="menu-icons" routerLink="/settings">
+           <mat-icon>settings</mat-icon>
+           <span>Settings</span>
+         </a>
+       </mat-list-item>
+     </div>
+     <!-- </mat-nav-list> -->
+   </mat-sidenav>
+   <mat-sidenav-content>
+       <div class="content mat-elevation-z12">
+       <router-outlet></router-outlet>
+     </div>
+   </mat-sidenav-content>
+ </mat-sidenav-container>
