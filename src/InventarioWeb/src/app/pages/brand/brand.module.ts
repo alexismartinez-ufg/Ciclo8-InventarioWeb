@@ -6,6 +6,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule, Routes } from '@angular/router';
 import { authGuard } from '../../custom/auth.guard';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ component: BrandComponent,canActivate: [authGuard]
     MatCardModule,
     MatTableModule,
     MatButtonModule,
+    MatIconModule,
     RouterModule.forChild(routes)
   ],
   declarations: [
