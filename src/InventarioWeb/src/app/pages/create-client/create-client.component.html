@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <h2>Create Client</h2>
+    <form>
+        <div class="mb-3">
+            <label for="clientName" class="form-label">Client Name</label>
+            <input type="text" id="clientName" class="form-control" name="clientName" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="clientPhone" class="form-label">Phone</label>
+            <input type="text" id="clientPhone" class="form-control" name="clientPhone" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="clientComplementAddress" class="form-label">Address Complement</label>
+            <input type="text" id="clientComplementAddress" class="form-control" name="clientComplementAddress">
+        </div>
+        
+        <div class="mb-3">
+            <label for="idDistrict" class="form-label">District</label>
+            <select id="idDistrict" class="form-select" name="idDistrict" required>
+                <option value="">Select a district</option>
+                <option value="1">District 1</option>
+                <option value="2">District 2</option>
+                <option value="3">District 3</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>

@@ -1,0 +1,5 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna */
+  gap: 10px; /* Espacio entre los elementos */
+}
