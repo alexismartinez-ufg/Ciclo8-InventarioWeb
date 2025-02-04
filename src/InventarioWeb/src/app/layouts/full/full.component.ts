@@ -18,8 +18,9 @@ import { Menu } from '../../interfaces/Menu';
 })
 export class FullComponent {
   public listaMenu: Array<Menu> = [
-    {icono:"home",nombre:"Home",url:"brand"},
-    {icono:"home",nombre:"Home",url:"brand"},
-    {icono:"home",nombre:"Home",url:"brand"}
+    {icono:"",nombre:"Brands",url:"brand"},
+    {icono:"",nombre:"Category",url:"category"},
+    {icono:"",nombre:"Clients",url:"client"},
+    {icono:"",nombre:"Products",url:"product"},
   ]
 }

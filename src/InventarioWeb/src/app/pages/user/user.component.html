@@ -1,0 +1,55 @@
+<div class="container mt-4">
+    <h2>User Management</h2>
+    
+    <!-- Create User Form -->
+    <form class="mb-4">
+        <h4>Create User</h4>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" class="form-control" name="username" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" name="password" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="nameuser" class="form-label">Full Name</label>
+            <input type="text" id="nameuser" class="form-control" name="nameuser" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" name="email" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+    
+    <!-- User List -->
+    <h4>User List</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>exampleUser</td>
+                <td>John Doe</td>
+                <td>john.doe.com</td>
+                <td>
+                    <button class="btn btn-warning btn-sm">Edit</button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
